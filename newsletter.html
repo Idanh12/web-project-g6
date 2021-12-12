@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="Signup.css">
+    <script src="newsletter.js"></script>
+    <link rel="stylesheet" href="nav_footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newsletter</title>
+</head>
+
+
+<body>
+
+    <!------- nav bar --------->
+
+    <div class="navBar" id="navbar">
+
+        <div >
+            <a href="Home.html"><img  id="logo" src="temp.jpeg" alt= "logo_image"></a>
+        </div>
+
+        <a id="signin" href="Signin.html">כניסה</a>
+        <a id="signup" href="Signup.html">הרשמה</a>
+
+        <div class="links">
+            <a href="https://goo.gl/maps/Ror8JerRBGjeHwZ4A">מיקום העסק</a>
+            <br>
+            <a href="https://waze.com/ul?il=32.08051,34.81238&navigate=yes">ניווט לעסק</a>
+            <br>
+            <a href="termsNprivacy.html">תנאי שימוש באתר</a>
+            <br>
+            <a href="contactUs.html">צור קשר</a>
+            <br>
+            <a href="newsletter.html">הרשמה לניוזלטר</a>
+        </div>   
+
+    </div>
+
+
+    <!-- MAIN -->
+
+
+    <div id="MainCenter" class="Center">
+        
+
+        <form action="action_page.php" style="border:none">
+            <div class="info">
+                <h1 class="title1">הרשמה לניוזלטר</h1>
+
+                <label for="name" class="labels"><b>שם מלא</b></label><br><br>
+                <input type="text" placeholder="הזן שם מלא" name="name" required>  <br><br>
+
+                <label for="phone" class="labels"><b>מספר טלפון</b></label><br><br>
+                <input type="tel" id="phone" name="phone" placeholder="05XXXXXXXX" pattern="[0][5][0-9]{8}" required><br><br>
+
+                <label for="email" class="labels"><b>כתובת דואר אלקטרוני</b></label><br><br>
+                <input type="email" placeholder="הזן כתובת דואר אלקטרוני" id="email" name="email" required><br><br>
+
+            </div>
+
+            <button class="button1" type="submit" class="label">הצטרף</button>
+
+            <br>
+            <br>
+
+        </form>
+    </div>  
+    
+        
+    <!-- FOOTER -->
+
+
+    <div class="footerNavBar">
+        <div class="follow_us">
+            <a href="https://www.instagram.com/lumiere_or/"> <img id="follow"src="images/instagram.png" alt = "follow us"></a>
+        </div>
+
+        <div class="details" >
+                <h3>שירות לקוחות</h3>
+                <h3>057-7777888</h3>
+                <h3>support@lumiere.com</h3>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="nav.js"></script>
+
+
+
+</body>
+</html>

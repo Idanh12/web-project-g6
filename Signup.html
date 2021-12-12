@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="nav_footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singup</title>
+</head>
+
+<body>
+    
+    <!------- nav bar --------->
+    <div class="navBar" id="navbar">
+
+        <div >
+            <a href="Home.html"><img  id="logo" src="temp.jpeg" alt= "logo_image"></a>
+        </div>
+
+        <a id="signin" href="Signin.html">כניסה</a>
+        <a id="signup" href="Signup.html">הרשמה</a>
+
+        <div class="links">
+            <a href="https://goo.gl/maps/Ror8JerRBGjeHwZ4A">מיקום העסק</a>
+            <br>
+            <a href="https://waze.com/ul?il=32.08051,34.81238&navigate=yes">ניווט לעסק</a>
+            <br>
+            <a href="termsNprivacy.html">תנאי שימוש באתר</a>
+            <br>
+            <a href="contactUs.html">צור קשר</a>
+            <br>
+            <a href="newsletter.html">הרשמה לניוזלטר</a>
+        </div>   
+
+    </div>
+
+
+    <div id="Container" class="grid-container">
+
+        <div id="MainCenter" class="Center">
+            
+            <form action="action_page.php" style="border:none">
+                <div class="info">
+                    <h1 class="title1">הרשמה</h1>
+
+                    <label for="email" class="labels"><b>כתובת מייל</b></label><br>
+                    <input type="text" placeholder="הכנס כתובת דואר אלקטרוני" name="email" required><br>
+
+                    <label for="password" class="labels"><b>סיסמה</b></label><br>
+                    <input type="password" placeholder="הקלד סיסמה" name="password" required><br>
+
+                    <label for="password-repeat" class="labels"><b>חזור על הסיסמה</b></label><br>
+                    <input type="password" placeholder="הקלד סיסמה בשנית" name="psw-repeat" required><br>
+
+                    <label for="name" class="labels"><b>שם מלא</b></label><br>
+                    <input type="text" placeholder="הכנס שם מלא" name="name" required>  <br>
+
+                    <label for="birthday" class="labels"><b>:תאריך לידה</b></label> <br>
+                    <input type="date" id="birthday" name="birthday" required> <br>
+
+                    <label for="phone" class="labels"><b>:הכנס מספר טלפון</b></label><br>
+                    <input type="tel" id="phone" name="phone" placeholder="05X-XXXXXXX" pattern="[0-9]{3}-[0-9]{7}" required><br>
+                    <label for="Gender" class="labels"><b>מין (סמנ/י)</b></label><br>
+                    <input type="radio" id="gender" name="fav_language" value="gender">
+                    <label for="html">נקבה</label>
+                    <input type="radio" id="gender" name="fav_language" value="gender">
+                    <label for="css">זכר</label><br>
+
+
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> זכור אותי
+                    </label>
+                    
+
+                    <p>פתיחת החשבון תהווה אישור לתנאים ופרטיות האתר <br><a href="termsNprivacy.html" style="color:dodgerblue">Terms & Privacy</a></p>
+                    
+                    </div>
+                        <button class="button1" type="submit" class="label">לחצ/י להרשמה</button>
+        </form>
+    </div>    
+    <!-- FOOTER -->
+
+
+    <div class="footerNavBar">
+        <div class="follow_us">
+            <a href="https://www.instagram.com/lumiere_or/"> <img id="follow"src="images/instagram.png" alt = "follow us"></a>
+        </div>
+
+        <div class="details">
+                <h3>שירות לקוחות</h3>
+                <h3>057-7777888</h3>
+                <h3>support@lumiere.com</h3>
+        </div>
+    </div>
+
+    <script src="nav.js"></script>
+
+</body>
+</html>

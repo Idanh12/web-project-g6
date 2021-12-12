@@ -1,0 +1,46 @@
+
+body {
+    /* background-image: url('cover.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover; */
+
+    background-color: rgb(223,207,194);
+  } 
+
+.main{
+    display: grid; 
+    grid-template-areas: 
+    'topPic about'
+    'cat cat'
+    'cakes packs'
+    ;
+    height: auto; 
+}
+
+#top_pic{
+    grid-area: topPic;
+    width: auto;
+    height: auto;
+}
+
+#cakes{
+    grid-area: cakes;
+}
+
+#packs{
+    grid-area: packs;
+}
+
+#about{
+    grid-area: about;
+    text-align: center;
+    box-sizing: 50%;
+    size: 30%;
+    width: auto;
+    padding: 100px;
+}
+
+.cat{
+    grid-area: cat;
+}

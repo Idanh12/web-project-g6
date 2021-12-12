@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+    
+
+}
+
+
+body {
+
+    background-color: rgb(223,207,194);
+
+  }
+
+
+/*---header-----*/
+
+ 
+  
+.navBar{
+    display: grid; 
+    grid-template-areas: 
+    'signup signin  logo links links ';
+    height: 30%; 
+    background-color:rgb(198,168,153) ; 
+}
+
+#signin{
+    grid-area: signin;
+    padding: 70px 0;   
+}
+
+#signup{
+    grid-area: signup;
+    padding: 70px 0;
+}
+
+#logo{
+    grid-area: logo;
+    width: 30%;
+    height: auto;
+    padding: 20px 0;
+    
+}
+
+.links{
+    grid-area: links;
+    padding: 40px;
+
+}
+
+/* Style the navbar */
+
+a:hover {
+    color: #0088a9;
+}
+
+a {
+    transition: all 0.3s ease 0s;
+}
+
+
+/* Page content */
+.content {
+    padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 60px;
+} 
+
+
+/*---footer-----*/
+
+.footerNavBar{
+    display: grid; 
+    grid-template-areas: 
+    'details details follow_us  ';
+    background-color:rgb(198,168,153) ; 
+    height: 30%; 
+}
+
+
+#follow{
+    grid-area: follow_us;
+    width: 30%;
+    height: auto;
+    padding: 70px 0;
+}
+
+.details{
+    grid-area: details;
+    padding: 50px;
+
+
+}

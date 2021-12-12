@@ -1,0 +1,42 @@
+
+body {
+    /* background-image: url('cover.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover; */
+    background-color: rgb(223,207,194);
+
+  }
+
+.cakes{
+    display: grid; 
+    grid-template-areas: 
+    'cake1 cake2'
+    'cake3 cake4'
+    ;
+    height: auto; 
+}
+
+#cake1{
+    grid-area: cake1;
+    width: 50%;
+    height: auto;
+}
+
+#cake2{
+    grid-area: cake2;
+    width: 50%;
+    height: auto;
+}
+
+#cake3{
+    grid-area: cake3;
+    width: 50%;
+    height: auto;
+}
+
+#cake4{
+    grid-area: cake4;
+    width: 50%;
+    height: auto;
+}

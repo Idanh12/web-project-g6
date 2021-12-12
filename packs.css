@@ -1,0 +1,51 @@
+
+body {
+
+    background-color: rgb(223,207,194);
+
+  }
+
+.packs{
+    display: grid; 
+    grid-template-areas: 
+    'title title'
+    'option1 option2'
+    'option3 option4'
+    'sum sum'
+    ;
+    height: auto; 
+}
+
+.title{
+    grid-area: title;
+
+}
+
+.sum{
+    grid-area: sum;
+
+}
+
+#option1{
+    grid-area: option1;
+    width: 50%;
+    height: auto;
+}
+
+#option2{
+    grid-area: option2;
+    width: 50%;
+    height: auto;
+}
+
+#option3{
+    grid-area: option3;
+    width: 50%;
+    height: auto;
+}
+
+#option4{
+    grid-area: option4;
+    width: 50%;
+    height: auto;
+}

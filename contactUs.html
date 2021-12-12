@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="packs.css">
+    <link rel="stylesheet" href="nav_footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Signup.js"></script>
+    <title>צור קשר</title>
+</head>
+
+<body>
+
+
+    <!------- nav bar --------->
+
+    <div class="navBar" id="navbar">
+
+        <div >
+            <a href="Home.html"><img  id="logo" src="temp.jpeg" alt= "logo_image"></a>
+        </div>
+
+        <a id="signin" href="Signin.html">כניסה</a>
+        <a id="signup" href="Signup.html">הרשמה</a>
+
+        <div class="links">
+            <a href="https://goo.gl/maps/Ror8JerRBGjeHwZ4A">מיקום העסק</a>
+            <br>
+            <a href="https://waze.com/ul?il=32.08051,34.81238&navigate=yes">ניווט לעסק</a>
+            <br>
+            <a href="termsNprivacy.html">תנאי שימוש באתר</a>
+            <br>
+            <a href="contactUs.html">צור קשר</a>
+            <br>
+            <a href="newsletter.html">הרשמה לניוזלטר</a>
+        </div>   
+
+    </div>
+
+
+    <!-- MAIN -->
+
+
+    <div  id="MainCenter" class="Center"  dir=rtl>
+        <form action="" method="post">
+            <h1 class = "header"> צור קשר </h1> <br>
+
+            <label for="Name"> שם מלא: </label>
+            <input type="text" placeholder="הזן את שמך המלא" name="Name" id="Name"> <br> <br>
+            <label for="ContactEmail"> דוא"ל: </label>
+            <input type="email" placeholder="הזן כתובת דואר אלקטרוני" name="ContactEmail" id="ContactEmail" required><br> <br>
+            <label for="content"> תוכן ההודעה: </label> <br> <br>
+            <textarea placeholder="כתוב בתיבה זו את ההודעה" name="contentMessage" id="content" cols="50" rows="15"></textarea> <br> <br>
+            <input type="Submit" name="SubmittionButton" value="שלח פניה"> <br> <br>
+            <label for="address"> הכתובת שלנו: ארלוזורוב 30 רמת גן </label> <br><br>
+        </form>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.579345587502!2d34.81472978575507!3d32.08062442647438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4bb60f2f6e7d%3A0xc8b34a177b020993!2z15DXqNec15XXlteV16jXldeRIDMwLCDXqNee16og15LXnw!5e0!3m2!1siw!2sil!4v1639289436765!5m2!1siw!2sil" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" ></iframe>     </div>
+        </div>
+    </div>
+
+                
+    
+    <!-- FOOTER -->
+
+
+    <div class="footerNavBar">
+        <div class="follow_us">
+            <a href="https://www.instagram.com/lumiere_or/"> <img id="follow"src="images/instagram.png" alt = "follow us"></a>
+        </div>
+
+        <div class="details" >
+                <h3>שירות לקוחות</h3>
+                <h3>057-7777888</h3>
+                <h3>support@lumiere.com</h3>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="nav.js"></script>
+
+
+
+</body>
+</html>
