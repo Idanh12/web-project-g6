@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+
+body {
+    /* background-image: url('cover.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover; */
+    background-color: rgb(223,207,194);
+
+}
+
+.cakes{
+    display: grid; 
+    grid-template-areas: 
+    'product description '
+    
+    ;
+}
+
+#product{
+    grid-area: cake1;
+    width: 100%;
+    height: auto;
+    padding: 70px ;
+
+}
+
+.description{
+    grid-area: description;
+    padding: 150px 300px;
+
+
+}
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="Pickup.css">
+    <link rel="stylesheet" href="nav_footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>איסוף עצמי</title>
+    
+</head>
+
+<body >
+
+    <!------- nav bar --------->
+    <div class="navBar" id="navbar">
+
+        <div >
+            <a href="Home.html"><img  id="logo" src="temp.jpeg" alt= "logo_image"></a>
+        </div>
+
+        <a id="signin" href="Signin.html">כניסה</a>
+        <a id="signup" href="Signup.html">הרשמה</a>
+
+        <div class="links">
+            <a href="https://goo.gl/maps/Ror8JerRBGjeHwZ4A">מיקום העסק</a>
+            <br>
+            <a href="https://waze.com/ul?il=32.08051,34.81238&navigate=yes">ניווט לעסק</a>
+            <br>
+            <a href="termsNprivacy.html">תנאי שימוש באתר</a>
+            <br>
+            <a href="contactUs.html">צור קשר</a>
+            <br>
+            <a href="newsletter.html">הרשמה לניוזלטר</a>
+        </div>   
+
+    </div>
+    
+    <div id="Container" class="grid-container" dir=rtl>
+
+        <div id="MainCenter" class="Center">
+            <h1 class="title1">איסוף עצמי</h1>
+            <span>בחר תאריך</span>
+            <input type="date" required> <br><br><br>
+            <span>בחר שעה</span>
+            <select name="" id="" class="year-input" required>
+                <option value="time" selected disabled>שעת האיסוף</option>
+                <option value="10:00">10:00</option>
+                <option value="10:30">10:30</option>
+                <option value="11:00">11:00</option>
+                <option value="11:30">11:30</option>
+                <option value="12:00">12:00</option>
+                <option value="12:30">12:30</option>
+                <option value="13:00">13:00</option>
+                <option value="13:30">13:30</option>
+                <option value="14:00">14:00</option>
+                <option value="14:30">14:30</option>
+            </select> <br> <br> <br>
+            <span>בחר את אופן התשלום</span> <br><br>
+            <input type="radio" id="cash" name="payment" value="cash">
+            <label for="optionA">מזומן</label><br>
+            <input type="radio" id="creditcard" name="payment" value="creditcard">
+            <label for="optionB">כרטיס אשראי</label><br><br>
+            <button onclick="complete_action()" class="button1" type="submit" class="label">המשך</button>
+
+            <!-- directs according to user choice -->
+            <script>
+                function complete_action() {
+                    var payment = document.getElementsByName('payment'); 
+                    if (payment[0].checked){
+                        window.alert('תודה ולהתראות')
+                    }
+                    else if (payment[1].checked){
+                        window.location.href = "payment.html";
+                    }
+                }
+            </script>
+            <br><br>
+            <img src="images/packs/pack_love.jpg" alt="pack" width=30% height=auto>
+
+
+
+        </div>
+    </div>    
+
+
+    <!-- FOOTER -->
+
+
+    <div class="footerNavBar">
+        <div class="follow_us">
+            <a href="https://www.instagram.com/lumiere_or/"> <img id="follow"src="images/instagram.png" alt = "follow us"></a>
+        </div>
+
+        <div class="details" >
+                <h3>שירות לקוחות</h3>
+                <h3>057-7777888</h3>
+                <h3>support@lumiere.com</h3>
+
+        </div>
+    </div>  
+
+    <script src="nav.js"></script>
+
+        
+</body>
+</html>

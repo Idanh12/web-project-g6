@@ -1,0 +1,37 @@
+
+body {
+    background-color: rgb(223,207,194);
+  } 
+
+
+.grid_container{
+    display: grid; 
+    grid-template-areas: 
+    'LeftSide Center RightSide'
+
+    ;
+    height: auto; 
+}
+
+#RightSide{
+    grid-area: RightSide;
+    width: 30%;
+    height: auto;
+}
+
+#LeftSide{
+    grid-area: LeftSide;
+    width: 30%;
+    height: auto;
+}
+
+
+.Center{
+    grid-area: Center;
+    text-align: center;
+    box-sizing: 50%;
+    size: 30%;
+    width: auto;
+    padding: 100px;
+}
+

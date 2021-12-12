@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>עגלת הקניות</title>
+    <link rel="stylesheet" href="shoppingCart.css">
+    <link rel="stylesheet" href="nav_footer.css">
+    <link rel="stylesheet" href="js1.js">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="shoppingCart.js" type="text/javascript"></script>
+</head>
+
+
+
+
+
+<!---- body ---->
+<body>
+
+    <!------- nav bar --------->
+    <div class="navBar" id="navbar">
+
+        <div >
+            <a href="Home.html"><img  id="logo" src="temp.jpeg" alt= "logo_image"></a>
+        </div>
+
+        <a id="signin" href="Signin.html">כניסה</a>
+        <a id="signup" href="Signup.html">הרשמה</a>
+
+        <div class="links">
+            <a href="https://goo.gl/maps/Ror8JerRBGjeHwZ4A">מיקום העסק</a>
+            <br>
+            <a href="https://waze.com/ul?il=32.08051,34.81238&navigate=yes">ניווט לעסק</a>
+            <br>
+            <a href="termsNprivacy.html">תנאי שימוש באתר</a>
+            <br>
+            <a href="contactUs.html">צור קשר</a>
+            <br>
+            <a href="newsletter.html">הרשמה לניוזלטר</a>
+        </div>   
+
+    </div>
+
+
+    <!------- Center --------->
+    <div id="MainCenter" class="container" dir=rtl>
+        <h1 class="title">עגלת קניות</h1>
+        <div class="option1">
+            <!------- כותרת מוצר--------->
+            <h2 class="">מוצר מספר 1</h2> <br>
+            <img src="Images/cakes/chocolate.jpg" width=10% height=auto>
+            <!------- כותרת מחיר--------->
+            <h3 class="PriceTag">50 שח</h3><br>
+            <!------- כפתור הוספה לעגלה של המוצר--------->
+            <!------- כשמוסיפים מוצר חשוב לשנות את ID מחיר ועוד--------->
+            <button type="button" class="btn btn-block btn-outline-primary"
+                    onClick="cartLS.add({id: 1, name: 'Procduct1', price: 50})">הוסף לעגלה</button>
+        </div>
+        <div class="option2">
+            <!------- כותרת מוצר--------->
+            <h2 class="">מוצר מספר 2</h2> <br>
+            <img src="Images/cakes/chocolate.jpg" width=10% height=auto>
+            <!------- כותרת מחיר--------->
+            <h3 class="PriceTag">60 שח</h3><br>
+            <!------- כפתור הוספה לעגלה של המוצר--------->
+            <!------- כשמוסיפים מוצר חשוב לשנות את ID מחיר ועוד--------->
+            <button type="button" class="btn btn-block btn-outline-primary"
+                    onClick="cartLS.add({id: 2, name: 'Procduct2', price: 60})">הוסף לעגלה</button>
+        </div>
+        <div class="option3">
+            <!------- כותרת מוצר--------->
+            <h2 class="">מוצר מספר 3</h2> <br>
+            <img src="Images/cakes/chocolate.jpg" width=10% height=auto>
+            <!------- כותרת מחיר--------->
+            <h3 class="PriceTag">80 שח</h3><br>
+            <!------- כפתור הוספה לעגלה של המוצר--------->
+            <!------- כשמוסיפים מוצר חשוב לשנות את ID מחיר ועוד--------->
+            <button type="button" class="btn btn-block btn-outline-primary"
+                    onClick="cartLS.add({id: 3, name: 'Procduct3', price: 80})">הוסף לעגלה</button>
+        </div>
+
+        <div class="option4">
+            <!------- כותרת מוצר--------->
+            <h2 class="">מוצר מספר 4</h2> <br>
+            <img src="Images/cakes/chocolate.jpg" width=10% height=auto>
+            <!------- כותרת מחיר--------->
+            <h3 class="PriceTag">100 שח</h3><br>
+            <!------- כפתור הוספה לעגלה של המוצר--------->
+            <!------- כשמוסיפים מוצר חשוב לשנות את ID מחיר ועוד--------->
+            <button type="button" class="btn btn-block btn-outline-primary"
+                    onClick="cartLS.add({id: 4, name: 'Procduct4', price: 100})">הוסף לעגלה</button>
+        </div>
+        
+
+        <div class="sumUp">
+            <!------- כפתור לאיפוס העגלה--------->
+            <br><br>
+            <button class="buttonProduct" onClick="cartLS.destroy()">לחצ/י על מנת לאפס את העגלה</button><br><br>
+            <div class="card-body">
+                <!------- עיצוב--------->
+                <style>
+                    table {
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                        width: 100%;
+                        border: 1px solid #ddd;
+                    }
+                    tr:nth-child(even) {
+                        background-color: lightblue;
+                    }
+                </style>
+
+                <table class="tableCart">
+                    <thead class="ext-right">
+                    <td></td>
+                    <td>מס' מוצר</td>
+                    <td>שם</td>
+                    <td></td>
+                    <td>כמות</td>
+                    <td></td>
+                    <td>סה"כ</td>
+                    </thead>
+
+                    <tbody class="cart">
+                    </tbody>
+
+                    <tfoot>
+                    <td class="text-right">סך הכל לתשלום:   <strong class="total"></strong></td>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <script>
+            function renderCart(items) {
+                const $cart = document.querySelector(".cart")
+                const $total = document.querySelector(".total")
+
+                $cart.innerHTML = items.map((item) => `
+                        <tr>
+                                                <!-------כפתור להסרה--------->
+                            <td class="text-right"><Button class="btn btn-primary" onClick="cartLS.remove(${item.id})">X</Button></td>
+                            <td>#${item.id}</td>
+                            <td style="width: 400px;">${item.name}</td>
+                            <td style="width: 25px;">
+                                <button type="button" class="btn btn-block btn-sm btn-outline-primary"
+                                    onClick="cartLS.quantity(${item.id},1)">+</button>
+                            </td>
+                            <td>${item.quantity}</td>
+                            <td style="width: 25px;">
+                                <button type="button" class="btn btn-block btn-sm btn-outline-primary"
+                                    onClick="cartLS.quantity(${item.id},-1)">-</button>
+                            </td>
+                            <td class="text-right">שח${item.price}</td>
+
+
+                        </tr>`).join("")
+
+                $total.innerHTML = "שח  " + cartLS.total()
+            }
+            renderCart(cartLS.list())
+            cartLS.onChange(renderCart)
+        </script>
+
+        <div class="sumBottom">
+            <br>
+            <label for="shipping" class="labels"><b>אופן המשלוח (סמנ/י)</b></label><br><br>
+            <input type="radio" id="delivery" name="shipping" value="delivery">
+            <label for="optionA">משלוח</label><br>
+            <input type="radio" id="pickup" name="shipping" value="pickup">
+            <label for="optionB">איסוף עצמי</label><br><br>
+            <button onclick="complete_action()" class="button1" type="submit" class="label">המשך</button>
+        </div>
+
+    
+        <!-- directs according to user choice -->
+        <script>
+            function complete_action() {
+                var payment = document.getElementsByName('shipping'); 
+                if (payment[0].checked){
+                    window.location.href = "Delivery.html";
+                }
+                else if (payment[1].checked){
+                    window.location.href = "pickup.html";
+                }
+            }
+        </script>
+        
+    </div>    
+
+
+        
+
+    <!-- FOOTER -->
+
+
+    <div class="footerNavBar">
+        <div class="follow_us">
+            <a href="https://www.instagram.com/lumiere_or/"> <img id="follow"src="images/instagram.png" alt = "follow us"></a>
+        </div>
+
+        <div class="details" >
+                <h3>שירות לקוחות</h3>
+                <h3>057-7777888</h3>
+                <h3>support@lumiere.com</h3>
+
+        </div>
+    </div>  
+
+    <script src="nav.js"></script>
+
+
+</body>
+</html>

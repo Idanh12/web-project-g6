@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="packs.css">
+    <link rel="stylesheet" href="nav_footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="packs.js"></script>
+    <title>מארזים מפנקים</title>
+</head>
+<body>
+
+        <!------- nav bar --------->
+
+        <div class="navBar" id="navbar">
+
+            <div >
+                <a href="Home.html"><img  id="logo" src="temp.jpeg" alt= "logo_image"></a>
+            </div>
+    
+            <a id="signin" href="Signin.html">כניסה</a>
+            <a id="signup" href="Signup.html">הרשמה</a>
+    
+            <div class="links">
+                <a href="https://goo.gl/maps/Ror8JerRBGjeHwZ4A">מיקום העסק</a>
+                <br>
+                <a href="https://waze.com/ul?il=32.08051,34.81238&navigate=yes">ניווט לעסק</a>
+                <br>
+                <a href="termsNprivacy.html">תנאי שימוש באתר</a>
+                <br>
+                <a href="contactUs.html">צור קשר</a>
+                <br>
+                <a href="newsletter.html">הרשמה לניוזלטר</a>
+            </div>   
+    
+        </div>
+
+
+        <!-- MAIN -->
+
+        <div class="packs">
+
+            <div class="title">
+                <h2 for= "cake1">תוכלו לבחור עד חמישה קינוחים  ולפחות 2 ולהרכיב מארז לבחירתכם</h2>
+                <h2 for= "cake1">מארזי קינוחים זאת האופציה המושלמת למי שפשוט לא יכולים להחליט</h2>
+
+            </div>
+
+            <div class="option1">
+                <param id="first_option" value="crack pai">
+                <h1 for= "option1">פרוסת קראק פאי</h1>
+                <h2 for= "option1">מחיר: 35 שח</h2>
+                <label for="quantity">כמות</label>
+                <input id= "quantity1" for= "add1" type ="number">
+                
+                <button id="add1" onclick="add_item_to_pack(quantity1, first_option)">הוסף למארז</button>
+                <img id="option1" src="Images/cakes/crack_pai.jpg" alt="crack_pai">
+            </div>
+
+            <div class="option2">
+                <param id="second_option" value="קינוח פטל">
+                <h1 for= "option2">קינוח פטל</h1>
+                <h2 for= "option2">מחיר: 35 שח</h2>
+                <label for="quantity">כמות</label>
+                <input id= "quantity2" for= "add2" type ="number">
+               
+                <button id="add2" onclick="add_item_to_pack(quantity2, second_option)">הוסף למארז</button>
+                <img id="option2" src="Images/packs/petel.jpg" alt="petel">
+            </div>
+
+            <div class="option3">
+                <param id="third_option" value="סנט הונורה קטן">
+                <h1 for= "option3">סנט הונורה קטן</h1>
+                <h2 for= "option3">מחיר: 35 שח</h2>
+                <label for="quantity">כמות</label>
+                <input id= "quantity3" for= "add3" type ="number" >
+                
+                <button id="add3" onclick="add_item_to_pack(quantity3, third_option)">הוסף למארז</button>
+                <img id="option3" src="Images/packs/saint_small.jpg" alt="saint">
+            </div>
+
+            <div class="option4">
+                <param id="forth_option" value="פאי אוכמניות קטן">
+                <h1 for= "option4">פאי אוכמניות קטן</h1>
+                <h2 for= "option4">מחיר: 35 שח</h2>
+                <label for="quantity">כמות</label>
+                <input id= "quantity4" for= "add4" type ="number">
+                
+                <button id="add4" onclick="add_item_to_pack(quantity4, forth_option)">הוסף למארז</button>
+                <img id="option4" src="Images/packs/blueberries.jpg" alt="blueberries">
+                
+            </div>
+
+            <div class="sum">
+                <param id="pack_quantity" value=0>
+                <h1>קינוחים שנבחרו</h1>
+                <li id="list"></li>
+                <br>
+                <a href="shoppingCart.html"><button>הוסף מארז לעגלה</button></a>
+                <br>
+                <button onclick="clear_list()" >נקה בחירה</button>
+
+
+            </div>
+        </div>
+
+
+
+
+        
+
+        <!-- FOOTER -->
+
+
+        <div class="footerNavBar">
+            <div class="follow_us">
+                <a href="https://www.instagram.com/lumiere_or/"> <img id="follow"src="images/instagram.png" alt = "follow us"></a>
+            </div>
+    
+            <div class="details" >
+                    <h3>שירות לקוחות</h3>
+                    <h3>057-7777888</h3>
+                    <h3>support@lumiere.com</h3>
+    
+            </div>
+        </div>  
+    
+        <script src="nav.js"></script>
+    
+</body>
+</html>
